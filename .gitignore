@@ -1,0 +1,7 @@
+*.com
+*.class
+target/classes/com/
+bin/
+.classpath
+.project
+.settings/
