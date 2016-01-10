@@ -7,7 +7,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 import opennlp.tools.namefind.NameFinderME;
 import opennlp.tools.namefind.NameSample;
@@ -80,6 +83,25 @@ public class NLPOperation {
 		return sentences;
 	}
 
+	
+	
+	/*
+	 * Purpose: Method to get tokens for a given document sentences
+	 * 
+	 */
+	
+	public List<Tokens> ProcessSentences(String[] sentences) {
+		List<Tokens> tokenList = new ArrayList<Tokens>();
+		
+		for (String sentence : sentences) {
+			tokenList.add(new Tokens(sentence, Arrays.asList(GetTokens(sentence))));
+		}
+		
+		return tokenList;
+	}
+	
+	
+	
 	/*
 	 * Purpose: Method to get tokens from the given sentence
 	 * 
@@ -89,6 +111,7 @@ public class NLPOperation {
 	public String[] GetTokens(String fileContent) {
 		InputStream tokenIS = null;
 		String tokens[] = null;
+		
 		ClassLoader clsLoader = getClass().getClassLoader();
 
 		try {
@@ -141,7 +164,7 @@ public class NLPOperation {
 
 //			@SuppressWarnings("deprecation")
 			TokenNameFinderModel nerModel = NameFinderME.train
-					("en", "person", sampleDS, Collections.<String, Object>emptyMap());
+					("en", "entity", sampleDS, Collections.<String, Object>emptyMap());
 
 			 modelOS = new BufferedOutputStream(new FileOutputStream(
 					 clsLoader.getResource("nlpbin/").getPath() + "en-ner-entity.bin"));
@@ -179,10 +202,22 @@ public class NLPOperation {
 	 * Purpose: Method to identify the Named Entity based on the custom model
 	 * 
 	 */
-	public Span[] IdentifyNamedEntities(String[] sentences) {
+	public ArrayList<NamedEntity> IdentifyEntities(String[] sentences) {
+		NameFinderME nameFinder = BuildNFMEModel();
+		ArrayList<NamedEntity> neList = IdentifyNamedEntities(nameFinder, sentences);
+		return neList;
+	}
+
+	
+	
+	/*
+	 * Purpose: Method to load the custom NER model
+	 * 
+	 */
+	public NameFinderME BuildNFMEModel() {
 		InputStream nerIS = null;
-		Span entitySpans[] = null;
 		TokenNameFinderModel tokenNFM = null;
+		NameFinderME nameFinder = null;
 		
 		ClassLoader clsLoader = getClass().getClassLoader();
 		
@@ -190,25 +225,17 @@ public class NLPOperation {
 			nerIS = new FileInputStream(clsLoader.getResource("nlpbin/en-ner-entity.bin").getFile());
 			
 			tokenNFM = new TokenNameFinderModel(nerIS);
-			NameFinderME nameFinder = new NameFinderME(tokenNFM);
-			for(String sentence : sentences) {
-				entitySpans = nameFinder.find(GetTokens(sentence));
-				
-				System.out.println(sentence);
-				for(Span s: entitySpans) {					
-					System.out.println(s.toString());
-				}
-			}			
-			
-			nameFinder.clearAdaptiveData();
+			nameFinder = new NameFinderME(tokenNFM);
 		} 
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} catch (InvalidFormatException e) {
+		} 
+		catch (InvalidFormatException e) {
 			e.printStackTrace();
-		} catch (IOException e) {
+		} 
+		catch (IOException e) {
 			e.printStackTrace();
-		}
+		}		
 		finally {
 
 			try {
@@ -223,6 +250,75 @@ public class NLPOperation {
 
 			}
 		}
-		return entitySpans;
+		return nameFinder;
+	}
+	
+	
+	/*
+	 * Purpose: Method to identify the Named Entity based on the custom model
+	 * Input: NameFinderME, sentence tokens
+	 * Output: NE - Sentence and Spans
+	 * 
+	 */
+	private ArrayList<NamedEntity> IdentifyNamedEntities(NameFinderME nameFinder,String[] sentences) {
+		Span entitySpans[] = null;
+		ArrayList<NamedEntity> neList = new ArrayList<NamedEntity>();
+		
+		for(String sentence : sentences) {
+			//find the Named Entities from the sentence tokens
+			entitySpans = nameFinder.find(GetTokens(sentence));		
+			
+			//If sentence has spans, add it to result list
+			if (entitySpans.length > 0) {
+				neList.add(new NamedEntity(sentence, entitySpans));
+			}
+			else
+				System.out.println("Not found NE for sentence - " + sentence);
+		}	
+		
+		nameFinder.clearAdaptiveData();
+		
+		if (neList.isEmpty())
+			return null;
+		else
+			return neList;
+	}
+	
+	
+	/*
+	 * Purpose: Method to process multiple documents & identify Named Entities based on the custom model
+	 * 		Invokes BuildNFMEModel() - to build the NER model
+	 * 		Invoked IdentifyNamedEntities() - to identify the NEs
+	 * Input: Sentence list from a document
+	 * Output: Collection of NamedEntity objects
+	 * 
+	 * Assumption:
+	 * 		1) Won't ignore if identical sentence appear in the same or different file 
+	 * 
+	 */
+	
+	public ArrayList<NamedEntity> ProcessSentenceCollection(List<String[]> sentencesList) {
+		ArrayList<NamedEntity> outputNEList = new ArrayList<NamedEntity>();
+		
+		NameFinderME nameFinder = BuildNFMEModel();
+		
+		//process each document sentence
+		for (String[] sentences : sentencesList) {
+			//send the model and document sentences
+			ArrayList<NamedEntity> neList = IdentifyNamedEntities(nameFinder, sentences);
+			
+			//append to NE collection to final output if it is not empty
+			if (neList != null) {
+				for (NamedEntity ne : neList) {
+					outputNEList.add(ne);
+				}
+			}
+		}
+		
+		nameFinder = null;
+		if (outputNEList.isEmpty())
+			return null;
+		else
+			return outputNEList;
 	}
 }

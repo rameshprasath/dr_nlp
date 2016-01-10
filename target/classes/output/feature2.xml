@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SENTENCES>
+  <SENTENCE VALUE="The term &quot;First World War&quot; was first used in September 1914 by the German philosopher Ernst Haeckel, who claimed that &quot;there is no doubt that the course and character of the feared 'European War' ... will become the first world war in the full sense of the word.&quot;">
+    <SPANS>
+      <SPAN START="0" END="3" TYPE="entity" />
+      <SPAN START="3" END="37" TYPE="entity" />
+      <SPAN START="37" END="56" TYPE="entity" />
+    </SPANS>
+  </SENTENCE>
+  <SENTENCE VALUE="Why did the war begin?">
+    <SPANS>
+      <SPAN START="0" END="6" TYPE="entity" />
+    </SPANS>
+  </SENTENCE>
+  <SENTENCE VALUE="The immediate trigger for war was the 28 June 1914 assassination of Archduke Franz Ferdinand of Austria, heir to the throne of Austria-Hungary, by Yugoslav nationalist Gavrilo Princip (19 years old at the time) in Sarajevo.">
+    <SPANS>
+      <SPAN START="0" END="41" TYPE="entity" />
+    </SPANS>
+  </SENTENCE>
+  <SENTENCE VALUE="This set off a diplomatic crisis when Austria-Hungary delivered an ultimatum to the Kingdom of Serbia, and entangled international alliances formed over the previous decades were invoked.">
+    <SPANS>
+      <SPAN START="0" END="29" TYPE="entity" />
+    </SPANS>
+  </SENTENCE>
+  <SENTENCE VALUE="Within weeks, the major powers were at war and the conflict soon spread around the world.">
+    <SPANS>
+      <SPAN START="0" END="18" TYPE="entity" />
+    </SPANS>
+  </SENTENCE>
+</SENTENCES>
+
