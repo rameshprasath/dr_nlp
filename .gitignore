@@ -1,5 +1,6 @@
 *.com
 *.class
+*.*~
 target/classes/com/
 bin/
 .classpath
