@@ -1,292 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SENTENCES>
-  <SENTENCE VALUE="A differentiable manifold is a type of manifold that is locally similar enough to a linear space to allow one to do calculus.">
-    <SPANS>
-      <SPAN START="0" END="24" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="Any manifold can be described by a collection of charts, also known as an atlas.">
-    <SPANS>
-      <SPAN START="0" END="17" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="One may then apply ideas from calculus while working within the individual charts, since each chart lies within a linear space to which the usual rules of calculus apply.">
-    <SPANS>
-      <SPAN START="0" END="31" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="If the charts are suitably compatible (namely, the transition from one chart to another is differentiable), then computations done in one chart are valid in any other differentiable chart.">
-    <SPANS>
-      <SPAN START="0" END="19" TYPE="entity" />
-      <SPAN START="19" END="34" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
   <SENTENCE VALUE="Apollo 11 was the spaceflight that landed the first humans on the Moon, Americans Neil Armstrong and Buzz Aldrin, on July 20, 1969.">
     <SPANS>
-      <SPAN START="0" END="14" TYPE="entity" />
-      <SPAN START="14" END="27" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="Armstrong became the first to step onto the lunar surface six hours later.">
-    <SPANS>
-      <SPAN START="0" END="14" TYPE="entity" />
+      <SPAN START="0" END="2" TYPE="entity" ENTITY="Apollo 11" />
+      <SPAN START="12" END="13" TYPE="entity" ENTITY="Moon" />
+      <SPAN START="15" END="17" TYPE="entity" ENTITY="Neil Armstrong" />
+      <SPAN START="18" END="20" TYPE="entity" ENTITY="Buzz Aldrin" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="Armstrong spent about two and a half hours outside the spacecraft, Aldrin slightly less, and together they collected 47.5 pounds (21.5 kg) of lunar material for return to Earth.">
     <SPANS>
-      <SPAN START="0" END="12" TYPE="entity" />
-      <SPAN START="12" END="23" TYPE="entity" />
-      <SPAN START="23" END="34" TYPE="entity" />
+      <SPAN START="32" END="33" TYPE="entity" ENTITY="Earth" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="The third member of the mission, Michael Collins, piloted the command spacecraft alone in lunar orbit until Armstrong and Aldrin returned to it just under a day later for the trip back to Earth.">
     <SPANS>
-      <SPAN START="0" END="7" TYPE="entity" />
-      <SPAN START="7" END="37" TYPE="entity" />
+      <SPAN START="7" END="9" TYPE="entity" ENTITY="Michael Collins" />
+      <SPAN START="35" END="36" TYPE="entity" ENTITY="Earth" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="Sun Microsystems, Inc. was a company that sold computers, computer components, computer software, and information technology services and that created the Java programming language and the Network File System (NFS).">
     <SPANS>
-      <SPAN START="0" END="36" TYPE="entity" />
+      <SPAN START="0" END="2" TYPE="entity" ENTITY="Sun Microsystems" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="Sun significantly evolved several key computing technologies, among them Unix, RISC processors, thin client computing, and virtualized computing.">
     <SPANS>
-      <SPAN START="0" END="23" TYPE="entity" />
+      <SPAN START="0" END="1" TYPE="entity" ENTITY="Sun" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="Sun was founded on February 24, 1982.">
     <SPANS>
-      <SPAN START="0" END="9" TYPE="entity" />
+      <SPAN START="0" END="1" TYPE="entity" ENTITY="Sun" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="On January 27, 2010, Sun was acquired by Oracle Corporation for US $7.4 billion.">
     <SPANS>
-      <SPAN START="0" END="4" TYPE="entity" />
-      <SPAN START="4" END="15" TYPE="entity" />
-      <SPAN START="15" END="18" TYPE="entity" />
+      <SPAN START="6" END="7" TYPE="entity" ENTITY="Sun" />
+      <SPAN START="10" END="12" TYPE="entity" ENTITY="Oracle Corporation" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="The following month, Sun was merged with Oracle USA, Inc. to become Oracle America, Inc.">
     <SPANS>
-      <SPAN START="0" END="4" TYPE="entity" />
-      <SPAN START="4" END="11" TYPE="entity" />
-      <SPAN START="11" END="18" TYPE="entity" />
+      <SPAN START="4" END="5" TYPE="entity" ENTITY="Sun" />
+      <SPAN START="14" END="16" TYPE="entity" ENTITY="Oracle America" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="Euclid's Elements has been referred to as the most successful and influential textbook ever written.">
     <SPANS>
-      <SPAN START="0" END="17" TYPE="entity" />
+      <SPAN START="2" END="3" TYPE="entity" ENTITY="Elements" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="First set in type in Venice in 1482, it is one of the very earliest mathematical works to be printed after the invention of the printing press and was estimated by Carl Benjamin Boyer to be second only to the Bible in the number of editions published, with the number reaching well over one thousand.">
     <SPANS>
-      <SPAN START="0" END="8" TYPE="entity" />
-      <SPAN START="8" END="58" TYPE="entity" />
+      <SPAN START="5" END="6" TYPE="entity" ENTITY="Venice" />
+      <SPAN START="32" END="35" TYPE="entity" ENTITY="Carl Benjamin Boyer" />
+      <SPAN START="41" END="42" TYPE="entity" ENTITY="Bible" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="For centuries, knowledge of at least part of the Elements was required of all students.">
     <SPANS>
-      <SPAN START="0" END="17" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="Not until the 20th century, by which time its content was universally taught through other school textbooks, did it cease to be considered something all educated people had read.">
-    <SPANS>
-      <SPAN START="0" END="32" TYPE="entity" />
+      <SPAN START="10" END="11" TYPE="entity" ENTITY="Elements" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="The Apollo spacecraft had three parts: a Command Module with a cabin for the three astronauts, and the only part that landed back on Earth; a Service Module, which supported the Command Module with propulsion, electrical power, oxygen, and water; and a Lunar Module for landing on the Moon.">
     <SPANS>
-      <SPAN START="0" END="58" TYPE="entity" />
+      <SPAN START="26" END="27" TYPE="entity" ENTITY="Earth" />
+      <SPAN START="56" END="57" TYPE="entity" ENTITY="Moon" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="After being sent toward the Moon by the Saturn V's upper stage, the astronauts separated the spacecraft from it and traveled for three days until they entered into lunar orbit.">
     <SPANS>
-      <SPAN START="0" END="33" TYPE="entity" />
+      <SPAN START="5" END="6" TYPE="entity" ENTITY="Moon" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="Armstrong and Aldrin then moved into the Lunar Module and landed in the Sea of Tranquility.">
     <SPANS>
-      <SPAN START="0" END="17" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="They stayed a total of about 21.5 hours on the lunar surface.">
-    <SPANS>
-      <SPAN START="0" END="13" TYPE="entity" />
+      <SPAN START="13" END="16" TYPE="entity" ENTITY="Sea of Tranquility" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the Pacific Ocean on July 24.">
     <SPANS>
-      <SPAN START="0" END="33" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="Horseshoe crabs are marine arthropods that live primarily in and around shallow ocean waters on soft sandy or muddy bottoms.">
-    <SPANS>
-      <SPAN START="0" END="21" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="They occasionally come onto shore to mate.">
-    <SPANS>
-      <SPAN START="0" END="8" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="They are commonly used as bait and in fertilizer.">
-    <SPANS>
-      <SPAN START="0" END="10" TYPE="entity" />
+      <SPAN START="22" END="23" TYPE="entity" ENTITY="Earth" />
+      <SPAN START="27" END="29" TYPE="entity" ENTITY="Pacific Ocean" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="In recent years, a decline in the population has occurred as a consequence of coastal habitat destruction in Japan and overharvesting along the east coast of North America.">
     <SPANS>
-      <SPAN START="0" END="30" TYPE="entity" />
+      <SPAN START="19" END="20" TYPE="entity" ENTITY="Japan" />
+      <SPAN START="27" END="29" TYPE="entity" ENTITY="North America" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="Because of their origin 450 million years ago (Mya), horseshoe crabs are considered living fossils.">
     <SPANS>
-      <SPAN START="0" END="19" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="Horseshoe crabs resemble crustaceans, but belong to a separate subphylum, and are closely related to arachnids.">
-    <SPANS>
-      <SPAN START="0" END="19" TYPE="entity" />
+      <SPAN START="9" END="10" TYPE="entity" ENTITY="Mya" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="The earliest horseshoe crab fossils are found in strata from the late Ordovician period, roughly 450 Mya.">
     <SPANS>
-      <SPAN START="0" END="19" TYPE="entity" />
+      <SPAN START="17" END="18" TYPE="entity" ENTITY="Mya" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="Montgomery Castle is a stone masonry castle looking over the town of Montgomery in Powys, Wales.">
     <SPANS>
-      <SPAN START="0" END="18" TYPE="entity" />
+      <SPAN START="0" END="2" TYPE="entity" ENTITY="Montgomery Castle" />
+      <SPAN START="14" END="15" TYPE="entity" ENTITY="Powys" />
+      <SPAN START="16" END="17" TYPE="entity" ENTITY="Wales" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="It is one of many Norman castles on the border between Wales and England.">
     <SPANS>
-      <SPAN START="0" END="15" TYPE="entity" />
+      <SPAN START="11" END="12" TYPE="entity" ENTITY="Wales" />
+      <SPAN START="13" END="14" TYPE="entity" ENTITY="England" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="The original castle was built at the order of Roger de Montgomery, earl of Shrewsbury sometime between 1071 and 1074.">
     <SPANS>
-      <SPAN START="0" END="22" TYPE="entity" />
+      <SPAN START="9" END="12" TYPE="entity" ENTITY="Roger de Montgomery" />
+      <SPAN START="15" END="16" TYPE="entity" ENTITY="Shrewsbury" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="On the rebellion of his son Robert of Belleme in 1102, the castle was given to Baldwin de Boulers.">
     <SPANS>
-      <SPAN START="0" END="11" TYPE="entity" />
-      <SPAN START="11" END="21" TYPE="entity" />
+      <SPAN START="6" END="9" TYPE="entity" ENTITY="Robert of Belleme" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="In 1267 Montgomery was the meeting place for treaty negotiations, where King Henry III granted Llywelyn ap Gruffudd the title of Prince of Wales.">
     <SPANS>
-      <SPAN START="0" END="26" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="After 1295 and the final Welsh War of the thirteenth century the castle became more of a military backwater and prison than a front line fortress.">
-    <SPANS>
-      <SPAN START="0" END="27" TYPE="entity" />
+      <SPAN START="12" END="15" TYPE="entity" ENTITY="King Henry III" />
+      <SPAN START="16" END="19" TYPE="entity" ENTITY="Llywelyn ap Gruffudd" />
+      <SPAN START="22" END="25" TYPE="entity" ENTITY="Prince of Wales" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="The Broyden–Fletcher–Goldfarb–Shanno (BFGS) algorithm is an iterative method for solving unconstrained nonlinear optimization problems.">
     <SPANS>
-      <SPAN START="0" END="4" TYPE="entity" />
-      <SPAN START="4" END="17" TYPE="entity" />
+      <SPAN START="1" END="2" TYPE="entity" ENTITY="Broyden–Fletcher–Goldfarb–Shanno" />
+      <SPAN START="3" END="4" TYPE="entity" ENTITY="BFGS" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="The BFGS method approximates Newton's method, a class of hill-climbing optimization techniques that seeks a stationary point of a (preferably twice continuously differentiable) function.">
     <SPANS>
-      <SPAN START="0" END="29" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="For such problems, a necessary condition for optimality is that the gradient be zero.">
-    <SPANS>
-      <SPAN START="0" END="16" TYPE="entity" />
+      <SPAN START="1" END="2" TYPE="entity" ENTITY="BFGS" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="Newton's method and the BFGS methods are not guaranteed to converge unless the function has a quadratic Taylor expansion near an optimum.">
     <SPANS>
-      <SPAN START="0" END="24" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="These methods use both the first and second derivatives of the function.">
-    <SPANS>
-      <SPAN START="0" END="13" TYPE="entity" />
+      <SPAN START="5" END="6" TYPE="entity" ENTITY="BFGS" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="However, BFGS has proven to have good performance even for non-smooth optimizations.">
     <SPANS>
-      <SPAN START="0" END="14" TYPE="entity" />
+      <SPAN START="0" END="1" TYPE="entity" ENTITY="However" />
+      <SPAN START="2" END="3" TYPE="entity" ENTITY="BFGS" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="James Clerk Maxwell &#xA;was a Scottish mathematical physicist.">
     <SPANS>
-      <SPAN START="0" END="9" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="His most notable achievement was to formulate the classical theory of electromagnetic radiation, bringing together for the first time electricity, magnetism, and light as manifestations of the same phenomenon.">
-    <SPANS>
-      <SPAN START="0" END="33" TYPE="entity" />
+      <SPAN START="0" END="3" TYPE="entity" ENTITY="James Clerk Maxwell" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="Maxwell's equations for electromagnetism have been called the &quot;second great unification in physics&quot; after the first one realised by        &#xA;Isaac Newton... Maxwell demonstrated that electric and magnetic fields travel through space as waves moving at the speed of light.">
     <SPANS>
-      <SPAN START="0" END="44" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="Maxwell proposed that light is an undulation in the same medium that is the cause of electric and magnetic phenomena.">
-    <SPANS>
-      <SPAN START="0" END="21" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="The unification     of light and electrical phenomena led to the prediction of the existence of radio waves.">
-    <SPANS>
-      <SPAN START="0" END="18" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="His discoveries helped usher in the era of modern physics, laying the foundation for such fields as special relativity and quantum mechanics.">
-    <SPANS>
-      <SPAN START="0" END="24" TYPE="entity" />
+      <SPAN START="22" END="24" TYPE="entity" ENTITY="Isaac Newton" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="His contributions to the science are considered by many to be of the same magnitude as those of Isaac Newton and Albert Einstein.">
     <SPANS>
-      <SPAN START="0" END="24" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="QED&#xA;">
-    <SPANS>
-      <SPAN START="0" END="1" TYPE="entity" />
+      <SPAN START="18" END="20" TYPE="entity" ENTITY="Isaac Newton" />
+      <SPAN START="21" END="23" TYPE="entity" ENTITY="Albert Einstein" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="The Antikythera mechanism is an ancient analog computer designed to predict astronomical positions and eclipses for calendrical and astrological purposes, as well as the cycles of Olympic Games.">
     <SPANS>
-      <SPAN START="0" END="30" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="Found housed in a 340 × 180 × 90 mm wooden box, the device is a complex clockwork mechanism composed of at least 30 meshing bronze gears.">
-    <SPANS>
-      <SPAN START="0" END="8" TYPE="entity" />
-      <SPAN START="8" END="29" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="Its remains were found as 82 separate fragments, of which only seven contain any gears or significant inscriptions.">
-    <SPANS>
-      <SPAN START="0" END="20" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="The largest gear is approximately 140 mm in diameter.">
-    <SPANS>
-      <SPAN START="0" END="10" TYPE="entity" />
+      <SPAN START="1" END="2" TYPE="entity" ENTITY="Antikythera" />
+      <SPAN START="27" END="29" TYPE="entity" ENTITY="Olympic Games" />
     </SPANS>
   </SENTENCE>
   <SENTENCE VALUE="The artifact was recovered in 1901 from the Antikythera shipwreck off the Greek island of Antikythera.">
     <SPANS>
-      <SPAN START="0" END="17" TYPE="entity" />
-    </SPANS>
-  </SENTENCE>
-  <SENTENCE VALUE="Believed to have been designed and constructed by Greek scientists, the instrument has been dated either between 150 to 100 BC or, according to a more recent view, at 205 BC.">
-    <SPANS>
-      <SPAN START="0" END="21" TYPE="entity" />
-      <SPAN START="21" END="35" TYPE="entity" />
+      <SPAN START="8" END="9" TYPE="entity" ENTITY="Antikythera" />
+      <SPAN START="15" END="16" TYPE="entity" ENTITY="Antikythera" />
     </SPANS>
   </SENTENCE>
 </SENTENCES>

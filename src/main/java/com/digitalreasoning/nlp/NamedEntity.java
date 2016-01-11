@@ -34,15 +34,25 @@ public class NamedEntity {
 	//Convert the object to XML Element which represents complete details
 	
 	public Element GetXMLElement() {
+		NLPOperation nlp = new NLPOperation();
+		String[] tokens = nlp.GetTokens(sentence);
+				
 		Element eToken = new Element("SENTENCE");
 		eToken.setAttribute(new Attribute("VALUE", sentence));
 		
+		String hlToken;
 		Element eSpans = new Element("SPANS");
 		for (Span ne : neSpans) {
+			hlToken = "";
 			Element eSpan = new Element("SPAN");
 			eSpan.setAttribute(new Attribute("START", Integer.toString(ne.getStart())));
 			eSpan.setAttribute(new Attribute("END", Integer.toString(ne.getEnd())));
 			eSpan.setAttribute(new Attribute("TYPE", ne.getType()));
+			
+			for(int i = ne.getStart(); i < ne.getEnd() && i < tokens.length; i++) {
+				hlToken = hlToken + " " + tokens[i];
+			}
+			eSpan.setAttribute(new Attribute("ENTITY", hlToken.trim())); 
 			eSpans.addContent(eSpan);
 		}
 		

@@ -10,7 +10,7 @@ public class NLPClient {
 	public static void main(String[] args) {
 		Feature1Test();
 		Feature2Test();
-		Feature3Test();
+		Feature3Test();		
 	}
 
 
@@ -48,10 +48,10 @@ public class NLPClient {
 		String fc = fp.readFileContent("input/nlp_data.txt");	
 		String sentences[] = nlp.GetSentences(fc); 
 		
-		//Feature 2 testing code
-		fp.CreateNERTrainingFile("input/NER.txt", "input/ner-entity.train");
+		//Commented since manually data file created outside
+		//fp.CreateNERTrainingFile("input/NER.txt", "input/ner-entity.train");
 
-		nlp.CreateNamedEntityModel("input/ner-entity.train");
+		//nlp.CreateNamedEntityModel("input/new-entity.train");
 
 		ArrayList<NamedEntity> neList = nlp.IdentifyEntities(sentences);
 		
@@ -100,4 +100,15 @@ public class NLPClient {
 		}
 	}
 
+	//Method creates training data file after splitting into sentences
+	public static void CreateTrainingFile() {
+		FileProcessor fp = new FileProcessor();
+		NLPOperation nlp = new NLPOperation();
+
+		//Feature 1 testing code
+		String fc = fp.readFileContent("input/data.train");	
+		String sentences[] = nlp.GetSentences(fc); 
+		fp.CreateUTF8File(sentences, "input/new-entity.train");
+		System.out.println("File creation completed");
+	}
 }

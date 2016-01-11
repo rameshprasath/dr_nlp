@@ -176,7 +176,7 @@ public class FileProcessor {
 		clsLoader = null;
 		xmlDoc = null;
 		outFile = null;
-		System.out.println("Creation of sentences.xml is completed");
+		
 	}
 	
 	
@@ -320,5 +320,53 @@ public class FileProcessor {
 	    }
 		
 		return fileList;
+	}
+	
+	
+	
+	public void CreateUTF8File(String[] fileContent, String outputFilePath) {
+		ClassLoader clsLoader = getClass().getClassLoader();
+		File outFile = new File(outputFilePath);
+		//"ner-entity.train"
+		
+		BufferedWriter bWriter = null;
+		
+		try {
+		
+			//write the formatted NER sample data file for model training
+			bWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(
+					Paths.get(clsLoader.getResource(outFile.getParent()).getPath(), 
+							outFile.getName()).toString()), "UTF8"));
+			
+			for(String line : fileContent) {
+				//To avoid writing empty lines
+				if(line.length() > 0) {
+					bWriter.write(line);
+					bWriter.newLine();
+				}
+			}
+			
+			bWriter.flush();
+		} 
+		catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} 
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		finally {
+
+			try {
+				if (bWriter != null)
+					bWriter.close();
+
+				clsLoader = null;
+			} 
+			catch (IOException e) {					
+				e.printStackTrace();
+			}
+		}
 	}
 }
